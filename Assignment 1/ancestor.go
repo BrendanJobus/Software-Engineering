@@ -1,6 +1,6 @@
 package main
 
-// Todo: Upload to github
+// TODO: : Upload to github
 
 // Notes: to make changes to an array or slice that persist after a functions scope, use a pointer to that slice
 
@@ -21,16 +21,16 @@ type Node struct {
 }
 
 func main() {		//
-	values := []int{10, 5, 13, 6, 4, 15, 2, 7, 35}					//				10		
-	//data := []string{"delta", "bravo", "charlie", "echo", "alpha"}			  5	  13
-																	//		    4  6	 15
-	tree := &Tree{}													//		   2    7 	   35
-	for i := 0; i < len(values); i++ {								//					
-		err := tree.Insert(values[i])											
-		if err != nil {															
-			log.Fatal("Error inserting value '", values[i], "': ", err)			
-		}																		
-	}																			
+	values := []int{10, 5, 13, 6, 4, 15, 2, 7, 35}							//						10
+																															//				  5	  13
+																															//		    4  6	 15
+	tree := &Tree{}																							//		   2    7 	 35
+	for i := 0; i < len(values); i++ {													//
+		err := tree.Insert(values[i])
+		if err != nil {
+			log.Fatal("Error inserting value '", values[i], "': ", err)
+		}
+	}
 	x := findLCA(tree.Root, 2, 7)
 	fmt.Println(x)
 }
@@ -49,8 +49,6 @@ func findPath(root *Node, path *[]int,k int) bool {
 }
 
 func findLCA(root *Node, n1, n2 int) int {
-	//path1 := make([]int, 0)
-	//path2 := make([]int, 0)
 	var path1, path2 []int
 
 	if !findPath(root, &path1, n1) || !findPath(root, &path2, n2) {

@@ -1,5 +1,3 @@
-# //TODO: Add to the github
-
 from dataclasses import dataclass
 
 # Binary tree node

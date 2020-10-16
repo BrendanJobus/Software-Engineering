@@ -1,5 +1,7 @@
 package main
 
+// TODO: get push and commit working in atom
+
 // Notes: to make changes to an array or slice that persist after a functions scope, use a pointer to that slice
 
 import (
